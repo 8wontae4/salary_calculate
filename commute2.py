@@ -172,7 +172,7 @@ def sum_actual_work_hours(df):
 st.title('엑셀 데이터 병합')
 
 # 기본 자료 업로드
-commute_file = st.file_uploader("[기본 자료] 엑셀 파일 업로드", type=['xlsx'])
+commute_file = st.file_uploader("[기본 자료] commuteList 엑셀 파일 업로드", type=['xlsx'])
 if commute_file:
     if 'commuteList' not in commute_file.name:
         st.error("파일명이 'commuteList'를 포함해야 합니다.")
@@ -181,7 +181,7 @@ if commute_file:
         st.success("[기본 자료] 파일 업로드 성공")
 
         # 추가 자료 업로드
-        absence_file = st.file_uploader("[추가 자료] 엑셀 파일 업로드", type=['xlsx'])
+        absence_file = st.file_uploader("[추가 자료] absenceTimeOffList 엑셀 파일 업로드", type=['xlsx'])
         if absence_file:
             if 'absenceTimeOffList' not in absence_file.name:
                 st.error("파일명이 'absenceTimeOffList'를 포함해야 합니다.")
